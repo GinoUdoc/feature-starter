@@ -15,7 +15,7 @@ check_packages() {
     fi
 }
 
-check_packages neovim
+check_packages git neovim
 
 # clone config_repo
 git clone $CONFIG_REPO $_CONTAINER_USER_HOME/.config/nvim
