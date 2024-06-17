@@ -1,7 +1,7 @@
 {
     "name": "NeoVIM",
     "id": "NeoVIM",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "description": "A feature to install NeoVIM with either LazyVim starter or your own configuration.",
     "options": {
         "config_repo": {
