@@ -1,0 +1,16 @@
+{
+    "name": "NeoVIM",
+    "id": "NeoVIM",
+    "version": "1.0.0",
+    "description": "A feature to install NeoVIM with either LazyVim starter or your own configuration.",
+    "options": {
+        "config_repo": {
+            "type": "string",
+            "description": "The URL of your own NeoVIM configuration repository.",
+            "default": "https://github.com/LazyVim/starter"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
