@@ -1,12 +1,12 @@
 {
-    "name": "NeoVIM",
-    "id": "NeoVIM",
+    "name": "nvim",
+    "id": "nvim",
     "version": "0.0.1",
-    "description": "A feature to install NeoVIM with either LazyVim starter or your own configuration.",
+    "description": "A feature to install nvim with either LazyVim starter or your own configuration.",
     "options": {
         "config_repo": {
             "type": "string",
-            "description": "The URL of your own NeoVIM configuration repository.",
+            "description": "The URL of your own nvim configuration repository.",
             "default": "https://github.com/LazyVim/starter"
         }
     },
