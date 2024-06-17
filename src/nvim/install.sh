@@ -1,10 +1,21 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
 set -e
 
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-sudo tar -C /opt -xzf nvim-linux64.tar.gz
+if [ "$(id -u)" -ne 0 ]; then
+    echo -e 'Script must be run as root. Use sudo, su, or add "USER root" to your Dockerfile before running this script.'
+    exit 1
+fi
 
-sudo ln -s /opt/nvim-linux64/bin/nvim /usr/local/bin/nvim
+# Checks if packages are installed and installs them if not
+check_packages() {
+    if ! dpkg -s "$@" > /dev/null 2>&1; then
+        apt-get update -y
+        apt-get -y install --no-install-recommends "$@"
+    fi
+}
+
+check_packages neovim
 
 # clone config_repo
 git clone $CONFIG_REPO $_CONTAINER_USER_HOME/.config/nvim
