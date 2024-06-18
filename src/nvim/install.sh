@@ -18,5 +18,5 @@ check_packages() {
 check_packages ca-certificates git neovim
 
 # clone config_repo
-git clone $CONFIG_REPO $_CONTAINER_USER_HOME/.config/nvim
+git clone $CONFIG_REPO usr/local/.config/nvim
 
