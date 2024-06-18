@@ -1,7 +1,7 @@
 {
     "name": "nvim",
     "id": "nvim",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A feature to install nvim with either LazyVim starter or your own configuration.",
     "options": {
         "config_repo": {
